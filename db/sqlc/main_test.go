@@ -23,4 +23,6 @@ func TestMain(m *testing.M) {
     }
     testQueries = New(conn)
     os.Exit(m.Run())
+
+    store := NewStore(conn)
 }
