@@ -51,14 +51,14 @@ type TransferTxResult struct {
 	ToEntry     Entry    `json:"to_entry"`
 }
 
-func (store *Store) TransferTx(
-	ctx context.Context,
-	arg TransferTxParams,
-) (TransferTxResult, error) {
-	var result TransferTxResult
-
-	err := store.execTx(ctx, func(q *Queries) error {
-        result.FromAccount, err := q.CreateTransfer()
-	})
-	return result, err
-}
+// func (store *Store) TransferTx(
+// 	ctx context.Context,
+// 	arg TransferTxParams,
+// ) (TransferTxResult, error) {
+// 	var result TransferTxResult
+//
+// 	err := store.execTx(ctx, func(q *Queries) error {
+//         result.FromAccount, err := q.CreateTransfer()
+// 	})
+// 	return result, err
+// }
